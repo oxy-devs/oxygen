@@ -1,0 +1,56 @@
+[index.js:2020-04-08T09:44:16.342Z] {"channelID":"692458700182650963","deleted":false,"id":"697381288658731030","type":"DEFAULT","content":">ping","authorID":"692312512900890644","pinned":false,"tts":false,"nonce":"697381289136750592","system":false,"embeds":[],"attachments":[],"createdTimestamp":1586339055934,"editedTimestamp":null,"webhookID":null,"applicationID":null,"activity":null,"flags":0,"reference":null,"guildID":"692458699691786262","cleanContent":">ping"}
+[index.js:2020-04-08T09:44:16.594Z] {"channelID":"692458700182650963","deleted":false,"id":"697381290034331648","type":"DEFAULT","content":"Ping?","authorID":"692350815679152179","pinned":false,"tts":false,"nonce":null,"system":false,"embeds":[],"attachments":[],"createdTimestamp":1586339056262,"editedTimestamp":null,"webhookID":null,"applicationID":null,"activity":null,"flags":0,"reference":null,"guildID":"692458699691786262","cleanContent":"Ping?"}
+[index.js:2020-04-08T09:44:21.724Z] {"channelID":"692458700182650963","deleted":false,"id":"697381311559630868","type":"DEFAULT","content":">image nasa","authorID":"692312512900890644","pinned":false,"tts":false,"nonce":"697381311463030784","system":false,"embeds":[],"attachments":[],"createdTimestamp":1586339061394,"editedTimestamp":null,"webhookID":null,"applicationID":null,"activity":null,"flags":0,"reference":null,"guildID":"692458699691786262","cleanContent":">image nasa"}
+[index.js:2020-04-08T09:44:24.173Z] {"channelID":"692458700182650963","deleted":false,"id":"697381321764372610","type":"DEFAULT","content":"Dark skies are disappearing from the world.  With modernization comes artificial lighting that brightens the night.  While these lights allow modern humans to see, much light is wasted up into the sky.  This light pollution not only wastes energy, but, when reflected by the Earth's atmosphere back down, creates a nighttime brightness that  disrupts wildlife and harms human health, while doing very little to prevent crime.  Light pollution is also making a dark night sky a scarcity for new generations.  While there is little that can be done in large cities, rural country areas could benefit from lighting that is fully shielded from exposing the night sky where it is not needed.  The featured panorama contains 6 adjacent vertical segments taken from different locations across Slovakia -- but with the same equipment and at the same time of night, and then subjected to the same digital post-processing.  Although no stars are visible on the left-most city sky, the right-most country sky is magnificently dark.  You can help protect the wonders of your night sky by favoring, when possible, dark sky friendly lightning.","authorID":"692350815679152179","pinned":false,"tts":false,"nonce":null,"system":false,"embeds":[],"attachments":["697381320912928778"],"createdTimestamp":1586339063827,"editedTimestamp":null,"webhookID":null,"applicationID":null,"activity":null,"flags":0,"reference":null,"guildID":"692458699691786262","cleanContent":"Dark skies are disappearing from the world.  With modernization comes artificial lighting that brightens the night.  While these lights allow modern humans to see, much light is wasted up into the sky.  This light pollution not only wastes energy, but, when reflected by the Earth's atmosphere back down, creates a nighttime brightness that  disrupts wildlife and harms human health, while doing very little to prevent crime.  Light pollution is also making a dark night sky a scarcity for new generations.  While there is little that can be done in large cities, rural country areas could benefit from lighting that is fully shielded from exposing the night sky where it is not needed.  The featured panorama contains 6 adjacent vertical segments taken from different locations across Slovakia -- but with the same equipment and at the same time of night, and then subjected to the same digital post-processing.  Although no stars are visible on the left-most city sky, the right-most country sky is magnificently dark.  You can help protect the wonders of your night sky by favoring, when possible, dark sky friendly lightning."}
+[index.js:2020-04-08T09:55:25.563Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-08T09:57:06.158Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-08T09:57:42.728Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-08T09:58:17.709Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-08T10:01:17.862Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T09:25:41.822Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T09:31:20.335Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T10:03:15.942Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T10:09:48.264Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T10:23:37.892Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T11:17:17.408Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T11:19:21.070Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T11:32:41.217Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T11:35:00.648Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T11:37:31.271Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T13:06:45.865Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T13:12:34.436Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T13:21:08.199Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T13:29:08.741Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T13:31:11.689Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T13:32:01.228Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T16:55:49.950Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T16:56:17.127Z] Unflipped <@692312512900890644>'s flip in CABADNS's <#692688718179467265>. Message ID: 697852395388141699
+[index.js:2020-04-09T16:57:15.529Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T16:58:06.726Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T16:58:45.226Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T17:01:44.800Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T17:03:33.231Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T17:05:25.473Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T17:13:58.982Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T17:36:52.918Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T17:42:47.330Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-09T20:02:54.773Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T10:31:54.847Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T10:52:58.098Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T10:56:21.906Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T10:58:00.940Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T10:59:04.687Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T11:16:32.241Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T11:29:16.881Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T11:40:23.710Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T11:41:10.892Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T12:45:25.629Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T13:44:08.478Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T18:13:07.914Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T18:37:34.118Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T18:45:16.843Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T18:47:23.700Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T18:49:43.493Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T18:51:27.589Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T18:52:59.766Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-04-10T19:00:36.022Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
