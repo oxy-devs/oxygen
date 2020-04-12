@@ -3,7 +3,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const isFile = fileName => {
-  return !fs.lstatSync(fileName).isFile()
+  if(fileName.includes('sudo')) return false;
+  return !fs.lstatSync(fileName).isFile();
 }
 module.exports = {
 	name: 'help',

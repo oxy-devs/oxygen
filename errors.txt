@@ -81,3 +81,46 @@ Require stack:
 Require stack:
 - C:\Users\schwa\Documents\Repos\Discord Basic Bot\commands\Bot\reload.js
 - C:\Users\schwa\Documents\Repos\Discord Basic Bot\index.js
+[index.js:2020-04-11T08:58:56.031Z] Error: Cannot find module './excuses.js'
+Require stack:
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\commands\Bot\reload.js
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\index.js
+[index.js:2020-04-11T09:23:52.375Z] Error: Cannot find module './excuses.js'
+Require stack:
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\commands\Bot\reload.js
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\index.js
+[index.js:2020-04-11T10:36:25.400Z] TypeError: Cannot read property 'delete' of undefined
+[index.js:2020-04-11T10:37:38.525Z] TypeError: message.guild.members.get is not a function
+[index.js:2020-04-11T10:37:42.984Z] TypeError: message.guild.members.get is not a function
+[index.js:2020-04-11T10:41:52.960Z] TypeError: Cannot read property 'name' of undefined
+[index.js:2020-04-11T15:12:37.030Z] ReferenceError: fs is not defined
+[index.js:2020-04-11T15:13:19.414Z] ReferenceError: fs is not defined
+[index.js:2020-04-11T15:14:56.641Z] Error: Cannot find module './commands/Fun/image.js'
+Require stack:
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\commands\Bot\reload.js
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\index.js
+[index.js:2020-04-11T15:21:20.577Z] Error: Cannot find module './commands/Bot/reload.js'
+Require stack:
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\commands\Bot\reload.js
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\index.js
+[index.js:2020-04-11T15:21:43.077Z] Error: Cannot find module './commands/Fun/image.js'
+Require stack:
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\commands\Bot\reload.js
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\index.js
+[index.js:2020-04-11T15:24:23.093Z] Error: Cannot find module './commands/Fun/image.js'
+Require stack:
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\commands\Bot\reload.js
+- C:\Users\schwa\Documents\Repos\Discord Basic Bot\index.js
+[index.js:2020-04-11T17:02:10.460Z] TypeError: Discord.Embed is not a constructor
+[index.js:2020-04-11T17:03:03.217Z] TypeError: member.roles.filter is not a function
+[index.js:2020-04-11T17:04:10.813Z] TypeError: member.roles.filter is not a function
+[index.js:2020-04-11T17:07:45.359Z] TypeError: message.guild.members.get is not a function
+[index.js:2020-04-11T17:09:19.225Z] TypeError: message.guild.members.get is not a function
+[index.js:2020-04-11T17:10:25.733Z] ReferenceError: member is not defined
+[index.js:2020-04-12T10:08:54.536Z] TypeError: Cannot read property 'id' of undefined
+[index.js:2020-04-12T10:37:19.625Z] TypeError: Cannot read property 'dispatcher' of undefined
+[index.js:2020-04-12T10:38:01.485Z] TypeError: Cannot read property 'dispatcher' of undefined
+[index.js:2020-04-12T10:39:49.122Z] TypeError: Cannot read property 'dispatcher' of undefined
+[index.js:2020-04-12T12:11:21.385Z] TypeError: Cannot read property 'dispatcher' of undefined
+[index.js:2020-04-12T12:12:52.246Z] TypeError: Cannot read property 'dispatcher' of undefined
+[index.js:2020-04-12T16:09:56.283Z] TypeError: global.client.users.get is not a function

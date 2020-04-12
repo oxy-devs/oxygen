@@ -1,11 +1,15 @@
 const fs = require('fs');
 const {prefix, mute_time, token} = require('./config.json')
 const {log, logError} = require('./commands/log.js')
+var path = require('path');
+global.appRoot = path.resolve(__dirname);
+console.log(global.appRoot);
+global.commands = {};
+const ms = require('ms');
 //const keep_alive = require('./keep_alive.js')
 const Discord = require('discord.js');
-const path = require('path')
-const client = new Discord.Client();
-client.commands = new Discord.Collection();
+global.client = new Discord.Client();
+global.client.commands = new Discord.Collection();
 var commandFiles = [];
 const isFile = fileName => {
   return !fs.lstatSync(fileName).isFile()
@@ -29,11 +33,15 @@ for (const file of commandFiles) {
 	// set a new item in the Collection
 	// with the key as the command name and the value as the exported module
 	if(command.isCommand){
-		client.commands.set(command.name, command);
+		global.client.commands.set(command.name, command);
+    global.commands[command.name] = command;
 	}
 }
 console.log("commanded");
-client.on('message', message => {
+global.client.on('message', message => {
+  global.lag = global.client.ping;
+  global.uptime = global.client.uptime;
+  console.log(global.client.uptime);
 	//console.log("MESSAGE");
 	//log(JSON.stringify(message),'index.js')
   /*
@@ -65,8 +73,8 @@ client.on('message', message => {
   }
   console.log(args.length);
 	const commandName = args.shift().toLowerCase();
-  const command = client.commands.get(commandName)
-		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+  const command = global.client.commands.get(commandName)
+		|| global.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
 	if (!command) return;
   if (command.args && !args.length) {
@@ -98,22 +106,22 @@ client.on('message', message => {
   }
 
 });
-client.login(token);
+global.client.login(token);
 /*
 console.log("imported");*/
-client.on('ready', () => {
+global.client.on('ready', () => {
   console.log("I'm in - Basic Bot has arrived.");
-  console.log(client.user.username);
-  log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`, 'index.js');
-	client.user.setStatus('available')
-	client.user.setActivity("life","at sentinence");
+  console.log(global.client.user.username);
+  log(`Bot has started, with ${global.client.users.size} users, in ${global.client.channels.size} channels of ${global.client.guilds.size} guilds.`, 'index.js');
+	global.client.user.setStatus('available')
+	global.client.user.setActivity("life","at sentinence");
 });
-client.on("guildCreate", guild => {
+global.client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`, 'index.js');
 });
 
-client.on("guildDelete", guild => {
+global.client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   log(`I have been removed from: ${guild.name} (id: ${guild.id})`, 'index.js');
 });/*

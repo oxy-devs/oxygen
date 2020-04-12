@@ -20,6 +20,6 @@ module.exports = {
     message.delete().catch(error=>{console.error(error)});
     console.log("deleted");
     // And we get the bot to say the thing:
-    message.channel.send(`User ${user} said ${sayMessage}`)
+    message.channel.send(`${sayMessage}`)
 	},
 };
