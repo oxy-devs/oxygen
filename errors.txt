@@ -124,3 +124,4 @@ Require stack:
 [index.js:2020-04-12T12:11:21.385Z] TypeError: Cannot read property 'dispatcher' of undefined
 [index.js:2020-04-12T12:12:52.246Z] TypeError: Cannot read property 'dispatcher' of undefined
 [index.js:2020-04-12T16:09:56.283Z] TypeError: global.client.users.get is not a function
+[index.js:2020-04-12T16:30:41.376Z] ReferenceError: mutetime is not defined

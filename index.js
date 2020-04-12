@@ -1,6 +1,7 @@
 const fs = require('fs');
-const {prefix, mute_time, token} = require('./config.json')
-const {log, logError} = require('./commands/log.js')
+const {prefix } = require('./config.json');
+const {token} = require('./token.json');
+const {log, logError} = require('./commands/log.js');
 var path = require('path');
 global.appRoot = path.resolve(__dirname);
 console.log(global.appRoot);

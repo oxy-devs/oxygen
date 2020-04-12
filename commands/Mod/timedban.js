@@ -24,6 +24,7 @@ module.exports = {
             if(!mutetime){
               return message.reply('that\'s not a valid time.');
             }
+            global.mutetime = mutetime;
           }catch{
             return message.reply('that\'s not a valid time.');
           }
@@ -34,16 +35,16 @@ module.exports = {
                 .catch(error => message.channel.send(`Sorry ${message.author} I couldn't ban the user`));
             const emb = new Discord.MessageEmbed().setColor('#63e2ff').setAuthor('Basic Bot').setTitle(`${member.user.tag} has been banned by ${message.author.tag} for ${rawtime} because: ${reason}`);
             message.channel.send(emb);
-            const ema = new Discord.MessageEmbed().setColor('#63e2ff').setAuthor('Basic Bot').setTitle(`${message.author.name} banned you from ${message.server.name} for ${rawtime} because: ${reason}`);
+            const ema = new Discord.MessageEmbed().setColor('#63e2ff').setAuthor('Basic Bot').setTitle(`${message.author.tag} banned you from ${message.guild.name} for ${rawtime} because: ${reason}`);
 						member.send(ema);
 
     }catch(err){
       console.log(err);
     }
     setTimeout(function(){
-      message.guild.unban(member);
+      message.guild.members.unban(member);
       message.channel.createInvite({unique: true}).then(invite => {
-      const ema = new Discord.MessageEmbed().setColor('#63e2ff').setAuthor('Basic Bot').setTitle(`You have been unbanned from  ${message.server.name}. Here is an invite: https://discord.gg/${invite.code}`);});
-  }, ms(mutetime));
+      const ema = new Discord.MessageEmbed().setColor('#63e2ff').setAuthor('Basic Bot').setTitle(`You have been unbanned from  ${message.guild.name}. Here is an invite: https://discord.gg/${invite.code}`);});
+  }, global.mutetime);
 	},
 };

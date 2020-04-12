@@ -18,7 +18,7 @@ module.exports = {
       "I have insufficient permissions!"
     );
   }
-  try{const songInfo = await ytdl.getInfo(args[0]);}catch{/*TODO: search*/ return message.reply("that\'s not a valid youtube URL.");}
+  const songInfo = await ytdl.getInfo(args[0]);//}catch{/*TODO: search*/ return message.reply("that\'s not a valid youtube URL.");}
 const song = {
  title: songInfo.title,
  url: songInfo.video_url,
@@ -47,7 +47,7 @@ try {
 } catch (err) {
  // Printing the error message if the bot fails to join the voicechat
  console.log(err);
- return global.queue.delete(message.guild.id);
+ return delete global.queue[message.guild.id];
  //return message.channel.send(err);
 }
 }else {
@@ -61,7 +61,7 @@ function play(guild, song) {
   //const serverQueue = queue.get(guild.id);
   if (!song) {
     global.queue[guild.id].voiceChannel.leave();
-    global.queue.delete(guild.id);
+    delete global.queue[guild.id];
     return;
   }
   const dispatcher = global.queue[guild.id].connection
