@@ -5,6 +5,7 @@ module.exports = {
 	description: 'Reccomend features to the devs.',
   useage: '<feature>',
 	isCommand: true,
+  aliases: ['suggest'],
 	execute(message, args) {
     if(args.length == 0) return message.reply('please specify a feature.');
     fs.appendFileSync('features.txt', (args.join(' ') + '\n'));

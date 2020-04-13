@@ -44,7 +44,8 @@ module.exports = {
     setTimeout(function(){
       message.guild.members.unban(member);
       message.channel.createInvite({unique: true}).then(invite => {
-      const ema = new Discord.MessageEmbed().setColor('#63e2ff').setAuthor('Basic Bot').setTitle(`You have been unbanned from  ${message.guild.name}. Here is an invite: https://discord.gg/${invite.code}`);});
+      const ema = new Discord.MessageEmbed().setColor('#63e2ff').setAuthor('Basic Bot').setTitle(`You have been unbanned from  ${message.guild.name}. Here is an invite: https://discord.gg/${invite.code}`);
+      member.user.send(ema);});
   }, global.mutetime);
 	},
 };

@@ -40,11 +40,12 @@ for (const file of commandFiles) {
 }
 console.log("commanded");
 global.client.on('message', message => {
+  console.log(message.content);
   global.lag = global.client.ping;
   global.uptime = global.client.uptime;
   console.log(global.client.uptime);
-	//console.log("MESSAGE");
-	//log(JSON.stringify(message),'index.js')
+  //console.log("MESSAGE");
+  //log(JSON.stringify(message),'index.js')
   /*
   if(message.channel.type == 'text'){
     if(messages[message.server.id] != undefined){
@@ -58,14 +59,14 @@ global.client.on('message', message => {
         }
       }
     }
-  }*/
+  }*//*
   if (message.content.includes("(╯°□°）╯︵ ┻━┻") && !message.author.bot){
-		message.reply('┬─┬ ノ( ゜-゜ノ)');
-		log(`Unflipped ${message.author}'s flip in ${message.guild}'s ${message.channel}. Message ID: ${message.id}`,'index.js');
-	}
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+    message.reply('┬─┬ ノ( ゜-゜ノ)');
+    log(`Unflipped ${message.author}'s flip in ${message.guild}'s ${message.channel}. Message ID: ${message.id}`,'index.js');
+  }*/
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-	const args = message.content.slice(1).split(/ +/);
+  const args = message.content.slice(1).split(/ +/);
 
   console.log("Args: "+args);
   console.log(args);
@@ -73,40 +74,41 @@ global.client.on('message', message => {
     args.shift();
   }
   console.log(args.length);
-	const commandName = args.shift().toLowerCase();
+  const commandName = args.shift().toLowerCase();
   const command = global.client.commands.get(commandName)
-		|| global.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+    || global.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-	if (!command) return;
+  if (!command) return;
   if (command.args && !args.length) {
     let reply = `You didn't provide any arguments, ${message.author}!`;
-		log(`${message.author} did not provide any args for ${command.name}`)
-		if (command.usage) {
-			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.useage}\``;
-		}
+    log(`${message.author} did not provide any args for ${command.name}`)
+    if (command.usage) {
+      reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.useage}\``;
+    }
 
-		return message.channel.send(reply);
-	}
-	if(command.perms){
-		if(!message.member.hasPermission(command.perms)){
-			return message.reply(`insufficient permissions! You need to have \`${command.perms}\` in order to run this!`);
-		}
-	}
+    return message.channel.send(reply);
+  }
+  if(command.perms){
+    if(!message.member.hasPermission(command.perms)){
+      return message.reply(`insufficient permissions! You need to have \`${command.perms}\` in order to run this!`);
+    }
+  }
   console.log("Matched command!" + command.name);
   if (command.guildOnly && message.channel.type !== 'text') {
-		return message.reply('I can\'t execute that command inside DMs!');
-		log(`${message.author} attempted to run ${command.name} inside a DM`);
-	}
+    return message.reply('I can\'t execute that command inside DMs!');
+    log(`${message.author} attempted to run ${command.name} inside a DM`);
+  }
 
   try {
     console.log("Args here:" + args);
-	  command.execute(message, args);
+    command.execute(message, args);
   } catch (error) {
-	  logError(error, 'index.js');
-	  message.reply('there was an error trying to execute that command!');
+    logError(error, 'index.js');
+    console.log(error);
+    message.reply('there was an error trying to execute that command!');
   }
 
-});
+});//here
 global.client.login(token);
 /*
 console.log("imported");*/
@@ -125,7 +127,11 @@ global.client.on("guildCreate", guild => {
 global.client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   log(`I have been removed from: ${guild.name} (id: ${guild.id})`, 'index.js');
-});/*
+});
+/*
+module.exports = {
+  whenMessage: onMessage()
+}*//*
 console.log("Readied");
 client.on('message', msg => {
     if (msg.author.id != client.user.id && (msg.content.substring(0,4)=="!bot")) {

@@ -125,3 +125,7 @@ Require stack:
 [index.js:2020-04-12T12:12:52.246Z] TypeError: Cannot read property 'dispatcher' of undefined
 [index.js:2020-04-12T16:09:56.283Z] TypeError: global.client.users.get is not a function
 [index.js:2020-04-12T16:30:41.376Z] ReferenceError: mutetime is not defined
+[index.js:2020-04-12T17:16:30.691Z] TypeError: Cannot read property 'includes' of undefined
+[index.js:2020-04-12T17:19:17.218Z] TypeError: Cannot read property 'includes' of undefined
+[index.js:2020-04-12T17:21:10.953Z] TypeError: Cannot read property 'startsWith' of undefined
+[index.js:2020-04-12T22:24:55.103Z] TypeError: Cannot read property 'iconURL' of null
