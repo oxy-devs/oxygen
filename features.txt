@@ -1,1 +1,3 @@
 Finish tictactoe and Roulette and get the perms thing working
+Bass boost for music (>bass 255)
+Meming
