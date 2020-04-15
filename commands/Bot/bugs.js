@@ -1,7 +1,7 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 const { URLSearchParams } = require('url');
-const { trelloKey, trelloToken } = require('./token.json');
+const { trelloKey, trelloToken } = require('../../token.json');
 module.exports = {
 	name: 'bugs',
 	description: 'Reoprt bugs to the devs.',
