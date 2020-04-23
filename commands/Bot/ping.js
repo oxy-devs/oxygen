@@ -5,7 +5,7 @@ const client = new Discord.Client();
 module.exports = {
 	name: 'ping',
 	description: 'Ping!',
-  useage: '',
+	useage: '',
 	isCommand: true,
 	execute(message, args) {
     ping(message);

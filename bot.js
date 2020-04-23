@@ -96,7 +96,6 @@ global.client.on('message', message => {
   console.log("Matched command!" + command.name);
   if (command.guildOnly && message.channel.type !== 'text') {
     return message.reply('I can\'t execute that command inside DMs!');
-    log(`${message.author} attempted to run ${command.name} inside a DM`);
   }
 
   try {
@@ -110,8 +109,7 @@ global.client.on('message', message => {
 
 });//here
 global.client.login(token);
-/*
-console.log("imported");*/
+
 global.client.on('ready', () => {
   console.log("I'm in - Basic Bot has arrived.");
   console.log(global.client.user.username);
@@ -128,79 +126,3 @@ global.client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   log(`I have been removed from: ${guild.name} (id: ${guild.id})`, 'index.js');
 });
-/*
-module.exports = {
-  whenMessage: onMessage()
-}*//*
-console.log("Readied");
-client.on('message', msg => {
-    if (msg.author.id != client.user.id && (msg.content.substring(0,4)=="!bot")) {
-        processMessage(msg);
-        console.log("Processed message");
-    }
-    else{
-      console.log("Message detected: "+msg.content)
-      console.log(msg.content.substring(0,4));
-    }
-});
-function processMessage(msg){
-  var text = msg.content.substring(5);
-  var list = text.split(' ');
-  console.log(list);
-  if(list[0] == "priorities"){
-    if(list[1] == "add"){
-      list.splice(0,2);
-      console.log(list);
-      priorities.push(list.join(" "));
-      console.log(priorities);
-      msg.channel.send("Added priority: "+list.join(" "));
-    }
-    else if(list[1] == "list"){
-      if(priorities.length != 0){
-        console.log(priorities.join(",\n").toString());
-        msg.channel.send(priorities.join(",\n").toString());
-      }
-      else{
-        msg.channel.send("No priorities!");
-      }
-    }
-    else if(list[1] == "remove"){
-      list.splice(0,2);
-      var temp = list.join(" ");
-      if(priorities.includes(temp)){
-        var index = priorities.indexOf(temp);
-        priorities.splice(index,1);
-        msg.channel.send("Removed priority: "+temp);
-      }
-      else{
-        msg.channel.send("That was not found in the priorities list.");
-      }
-    }
-    else if(list[1] == "clear"){
-      priorities = [];
-      msg.channel.send("Removed all priorities - you lazy person, you have nothing to do!");
-    }
-  }
-  else if(list[0] == "help"){
-    msg.channel.send("priorities - add: add a priority,\nlist: list all priorities,\nremove: remove the first instance of the priority if found,\nclear: remove all priorities.\n\ninsult - <name>: OPTIONAL the name to insult. When omitted, insults 'You'");
-  }
-  else if(list[0] == "insult"){
-    if(list.length > 1){
-      list.splice(0,1);
-      request({
-      url: 'http://insult.mattbas.org/api/insult',
-      method: 'GET', qs: {'who': list.join(" ")}}, function (error, response, body) { msg.channel.send(body+".")})
-    }
-    else{
-
-      request({
-      url: 'http://insult.mattbas.org/api/insult',
-      method: 'GET'}, function (error, response, body) { msg.channel.send(body+".")})
-    }
-  }
-  else{
-    msg.channel.send("That command was not found. Try using '!bot help' for a list of available commands.");
-  }
-}
-console.log("msg'd");
-client.login(token);*/
