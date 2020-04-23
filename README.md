@@ -1,7 +1,7 @@
 # Basic Bot
 A basic bot I made because I had nothing better to do.
 
-#Adding commands
+# Adding commands
 All commands are in a folder determining their classification. Commands in the `sudo` folder are not indexed or shown by the `help` command.
 
 Commands may export the following properties (not optional if not specified): 
