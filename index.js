@@ -1,5 +1,7 @@
 const fs = require('fs');
 const {prefix } = require('./config.json');
+var {settings} = require('./settings.json');
+global.settings = settings;
 const {token} = require('./token.json');
 const {log, logError} = require('./commands/log.js');
 var path = require('path');
@@ -64,7 +66,7 @@ global.client.on('message', message => {
     message.reply('┬─┬ ノ( ゜-゜ノ)');
     log(`Unflipped ${message.author}'s flip in ${message.guild}'s ${message.channel}. Message ID: ${message.id}`,'index.js');
   }*/
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
+  if (!message.content.startsWith(global.settings[message.guild.id]["prefix"]) || message.author.bot) return;
 
   const args = message.content.slice(1).split(/ +/);
 
@@ -115,10 +117,11 @@ global.client.on('ready', () => {
   console.log(global.client.user.username);
   log(`Bot has started, with ${global.client.users.size} users, in ${global.client.channels.size} channels of ${global.client.guilds.size} guilds.`, 'index.js');
 	global.client.user.setStatus('available')
-	global.client.user.setActivity("life","at sentinence");
+  global.client.user.setActivity("life","at sentinence");
 });
 global.client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
+  global.settings[guild.id] = {"prefix": ">"}
   log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`, 'index.js');
 });
 
@@ -126,3 +129,4 @@ global.client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   log(`I have been removed from: ${guild.name} (id: ${guild.id})`, 'index.js');
 });
+
