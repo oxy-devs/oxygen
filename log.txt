@@ -218,3 +218,5 @@
 [index.js:2020-05-07T16:30:40.753Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
 [index.js:2020-05-08T11:51:48.738Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
 [index.js:2020-05-08T11:52:58.826Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-08T11:55:23.100Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-08T11:55:45.407Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
