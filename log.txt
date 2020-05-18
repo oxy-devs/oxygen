@@ -220,3 +220,75 @@
 [index.js:2020-05-08T11:52:58.826Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
 [index.js:2020-05-08T11:55:23.100Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
 [index.js:2020-05-08T11:55:45.407Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-08T17:27:45.806Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-08T17:29:17.548Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-08T17:30:30.597Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T12:45:25.627Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T14:27:44.241Z] New guild joined: 1344 Squadron (id: 708684511571083284). This guild has 4 members!
+[index.js:2020-05-09T18:21:59.285Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:25:19.185Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:26:03.855Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:27:35.511Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:28:00.350Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:28:50.858Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:29:45.813Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:31:42.011Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:32:18.420Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:33:14.585Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:33:53.091Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:34:40.347Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:35:04.962Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:36:49.174Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:37:26.946Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:39:25.489Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:39:59.480Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:43:03.040Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:43:27.947Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[undefined:2020-05-09T18:44:06.101Z] <@692312512900890644> did not provide any args for prune
+[index.js:2020-05-09T18:44:51.997Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:45:48.399Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:46:48.058Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:53:09.231Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:54:21.032Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:55:23.592Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:56:14.460Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:56:43.582Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T18:57:27.253Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[undefined:2020-05-09T18:57:42.809Z] <@692312512900890644> did not provide any args for prune
+[index.js:2020-05-09T18:58:18.561Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T19:00:32.487Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T19:03:01.031Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T19:03:39.989Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T19:05:24.333Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T19:13:50.756Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-09T19:13:56.349Z] I have been removed from: 1344 Squadron (id: 708684511571083284)
+[index.js:2020-05-09T19:14:31.156Z] New guild joined: 1344 Squadron (id: 708684511571083284). This guild has 4 members!
+[index.js:2020-05-13T17:43:44.315Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T14:13:30.174Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T14:13:56.410Z] I have been removed from: That server with the devs on it (id: 692776399878094959)
+[index.js:2020-05-14T14:17:59.972Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T14:19:47.633Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T14:19:52.127Z] I have been removed from: That server with the devs on it (id: 692776399878094959)
+[index.js:2020-05-14T14:20:25.406Z] New guild joined: That server with the devs on it (id: 692776399878094959). This guild has 5 members!
+[index.js:2020-05-14T15:02:18.426Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T15:10:43.574Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T15:23:46.061Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T15:29:26.100Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T15:58:03.013Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T15:58:59.201Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T15:59:57.227Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T16:00:50.113Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T16:02:19.827Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T16:05:01.587Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T17:47:08.035Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T17:48:24.679Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T17:48:55.086Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T17:49:45.798Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-14T17:51:46.106Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-15T19:21:00.240Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-18T11:33:31.706Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-18T11:46:19.963Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-18T11:49:39.450Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-18T11:52:15.922Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-18T11:54:35.427Z] Bot has started, with undefined users, in undefined channels of undefined guilds.
+[index.js:2020-05-18T12:41:03.250Z] New guild joined: Oxygen's Lounge (id: 711917639794163713). This guild has 4 members!

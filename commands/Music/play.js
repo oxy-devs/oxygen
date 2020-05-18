@@ -1,9 +1,10 @@
 global.queue = {};
 const ytdl = require('ytdl-core');
+const got = require('got');
 module.exports = {
 	name: 'play',
 	description: 'Adds a song to the queue.',
-  useage: '<youtube url>',
+  useage: '<search term>',
 	isCommand: true,
 	async execute(message, args) {
 
@@ -18,17 +19,23 @@ module.exports = {
       "I have insufficient permissions!"
     );
   }
-  const songInfo = await ytdl.getInfo(args[0]);//}catch{/*TODO: search*/ return message.reply("that\'s not a valid youtube URL.");}
+  var resp = await got(`https://www.googleapis.com/youtube/v3/search/?part=snippet&q=${args.join(' ')}&key=AIzaSyBzhNZXe6c-9pT-2jUHqnUhQwy6PBMwY-w&topicId=/m/o4rlf`)
+  console.log(resp);
+  resp = JSON.parse(resp.body);
+  var item = resp.items[0];
+  //const songInfo = await ytdl.getInfo(args[0]);//}catch{/*TODO: search*/ return message.reply("that\'s not a valid youtube URL.");}
 const song = {
- title: songInfo.title,
- url: songInfo.video_url,
+ title: item.snippet.title,
+ url: "https://youtube.com/watch/?v=" + item.id.videoId,
 };
+console.log(song.url);
 if (!global.queue[message.guild.id]) {
   // Creating the contract for our queue
 const queueContruct = {
  textChannel: message.channel,
  voiceChannel: voiceChannel,
  connection: null,
+ dispatcher: null,
  songs: [],
  volume: 5,
  playing: true,
@@ -53,12 +60,13 @@ try {
 }else {
  global.queue[message.guild.id].songs.push(song);
  //console.log(global.queue.get(message.guild.id).songs);
- return message.channel.send(`${song.title} has been added to the queue!`);
+ return message.channel.send(`${song.title} has been added to the queue! URL: ${song.url}`);
 }
 	},
 };
 function play(guild, song) {
   //const serverQueue = queue.get(guild.id);
+  console.log(`Now playing: ${song}`);
   if (!song) {
     global.queue[guild.id].voiceChannel.leave();
     delete global.queue[guild.id];
@@ -71,6 +79,7 @@ function play(guild, song) {
         play(guild, global.queue[guild.id].songs[0]);
     })
     .on("error", error => console.error(error));
+    global.queue[guild.id].dispatcher = dispatcher;
 dispatcher.setVolumeLogarithmic(global.queue[guild.id].volume / 5);
 global.queue[guild.id].textChannel.send(`Now playing: **${song.title}**`);
 }

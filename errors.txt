@@ -129,3 +129,7 @@ Require stack:
 [index.js:2020-04-12T17:19:17.218Z] TypeError: Cannot read property 'includes' of undefined
 [index.js:2020-04-12T17:21:10.953Z] TypeError: Cannot read property 'startsWith' of undefined
 [index.js:2020-04-12T22:24:55.103Z] TypeError: Cannot read property 'iconURL' of null
+[index.js:2020-05-14T15:24:37.361Z] ReferenceError: guild is not defined
+[index.js:2020-05-14T15:29:10.613Z] TypeError: Cannot read property 'end' of null
+[index.js:2020-05-14T15:59:06.033Z] TypeError: Cannot read property 'premium' of undefined
+[index.js:2020-05-14T16:01:01.776Z] TypeError: message.reply.log is not a function
