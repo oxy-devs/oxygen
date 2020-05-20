@@ -2,18 +2,18 @@
   "servers": [
     {
       "id": "692776399878094959",
-      "prefix": ">",
+      "prefix": "beta>",
       "premium": true
     },
     {
       "id": "691406559384961047",
-      "prefix": ">",
+      "prefix": "beta>",
       "premium": false
     },
     {
       "id": "711917639794163713",
-      "prefix": ">",
-      "premium": false
+      "prefix": "<",
+      "premium": true
     }
   ]
 }

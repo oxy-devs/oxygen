@@ -29,7 +29,7 @@ async  function main(){
           .value()
     if(!server) server = 'null';
     res.send(server);});
-  app.listen(8080);
+  app.listen(8000);
   console.log('listening');
 }
 main();

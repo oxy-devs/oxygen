@@ -1,14 +1,47 @@
 async function main() {
   const fs = require('fs');
-  const low = require('lowdb');
-  const FileSync = require('lowdb/adapters/FileAsync');
   const server = require('./server');
-  const adapter = new FileSync('db.json');
-  const db = await low(adapter);
-  db.defaults({ servers: [] }).write();
-  global.db = db;
   const {prefix } = require('./config.json');
   const {token} = require('./token.json');
+  const Sequelize = require('sequelize');
+  const sequelize = new Sequelize('database', 'user', 'password', {
+    host: 'localhost',
+    dialect: 'sqlite',
+    logging: false,
+    // SQLite only
+    storage: 'database.sqlite',
+  });
+  global.Servers = sequelize.define('servers', {
+    internalID: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    id: {
+      type: Sequelize.STRING,
+      unique: true,
+    },
+    prefix: Sequelize.STRING,
+  });
+  global.Tags = sequelize.define('tags', {
+    internalID: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    guild: Sequelize.STRING,
+    name: {
+      type: Sequelize.STRING,
+      unique: true,
+    },
+    content: { type: Sequelize.TEXT },
+    creator: Sequelize.STRING,
+    usage_count: {
+      type: Sequelize.INTEGER,
+      defaultValue: 0,
+      allowNull: false,
+    },
+  });
   const {log, logError} = require('./commands/log.js');
   var path = require('path');
   global.appRoot = path.resolve(__dirname);
@@ -42,17 +75,30 @@ async function main() {
     }
   }
   console.log("commanded");
-  global.client.on('message', message => {
-    console.log(message.content);
+  global.client.on('message', async message => {
+    if(message.author.bot) return;
+    console.log(message.guild.name, message.guild.id, message.content);
+
+    //console.log(global.db.get('servers').find({id: message.guild.id}).value().prefix);
     global.lag = global.client.ping;
     global.uptime = global.client.uptime;
-    console.log(global.client.uptime);
-    if (!message.content.startsWith(global.db.get('servers').find({id: message.guild.id}).value().prefix) || message.author.bot) return;
-
-    const args = message.content.slice(1).split(/ +/);
+    var server = await global.Servers.findOne({ where: { id: message.guild.id } });
+    if(!server){
+      message.reply('You\'re not in my db, so I\'m adding this server with prefix <');
+      try{
+          server = await global.Servers.create({
+          id: message.guild.id,
+          prefix: '<',
+        });
+      }catch(e){
+        console.log(e);
+        return message.reply('something went wrong adding this server.');
+      }
+    }
+    if(!message.content.startsWith(server.get('prefix'))) return;
+    const args = message.content.slice(server.get('prefix').length).split(/ +/);
 
     console.log("Args: "+args);
-    console.log(args);
     if(args[0] == ''){
       args.shift();
     }
@@ -97,6 +143,8 @@ async function main() {
   global.client.login(token);
 
   global.client.on('ready', () => {
+    global.Servers.sync();
+    global.Tags.sync();
     console.log("I'm in - Basic Bot has arrived.");
     console.log(global.client.user.username);
     log(`Bot has started, with ${global.client.users.size} users, in ${global.client.channels.size} channels of ${global.client.guilds.size} guilds.`, 'index.js');
@@ -107,7 +155,7 @@ async function main() {
     // This event triggers when the bot joins a guild.
     log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`, 'index.js');
     guild.roles.create({data: {name: "Member", permissions: guild.roles.everyone.ALL}});
-    global.db.get('servers').push({id: guild.id, prefix: '>', premium: false}).write();
+    //global.db.get('servers').push({id: guild.id, prefix: 'beta>', premium: false}).write();
   });
 
   global.client.on("guildDelete", guild => {

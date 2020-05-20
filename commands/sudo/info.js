@@ -13,8 +13,6 @@ let hours = Math.floor(totalSeconds / 3600);
 totalSeconds %= 3600;
 let minutes = Math.floor(totalSeconds / 60);
 let seconds = Math.floor(totalSeconds % 60);
-let gilds = await global.client.shard.fetchClientValues('guilds.cache.size');
-let shardes = await global.client.shard.count;
-message.reply(`Hosted at ${global.appRoot}. Uptime: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds. Serving ${gilds} guilds on ${shardes} shards.`)
+message.reply(`Hosted at ${global.appRoot}. Uptime: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds.`)
 	},
 };

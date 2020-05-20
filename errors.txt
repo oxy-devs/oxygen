@@ -133,3 +133,13 @@ Require stack:
 [index.js:2020-05-14T15:29:10.613Z] TypeError: Cannot read property 'end' of null
 [index.js:2020-05-14T15:59:06.033Z] TypeError: Cannot read property 'premium' of undefined
 [index.js:2020-05-14T16:01:01.776Z] TypeError: message.reply.log is not a function
+[index.js:2020-05-18T13:44:13.908Z] TypeError: global.db.get(...).find(...).value(...).set is not a function
+[index.js:2020-05-19T17:16:03.089Z] TypeError: Cannot read property 'volume' of null
+[index.js:2020-05-19T17:16:34.578Z] TypeError: Cannot read property 'end' of null
+[index.js:2020-05-19T17:16:37.253Z] TypeError: Cannot read property 'end' of null
+[index.js:2020-05-19T17:58:46.291Z] TypeError: Cannot read property 'dispatcher' of null
+[index.js:2020-05-19T18:02:22.023Z] TypeError: Cannot read property 'end' of null
+[index.js:2020-05-19T18:02:39.573Z] TypeError: Cannot read property 'end' of null
+[index.js:2020-05-19T18:03:32.055Z] TypeError: Cannot read property 'end' of null
+[index.js:2020-05-20T13:27:55.488Z] TypeError: global.client.avatarURL is not a function
+[index.js:2020-05-20T13:28:22.920Z] ReferenceError: prefix is not defined
