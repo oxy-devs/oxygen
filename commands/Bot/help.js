@@ -13,6 +13,7 @@ module.exports = {
 	isCommand: true,
 	async execute(message, args) {
 		const { commands } = message.client;
+		var prefix = await global.Servers.findOne({ where: { id: message.guild.id }}).get('prefix');
 		console.log('here');
 		if (!args.length) {
 			console.log('args.length');
@@ -64,14 +65,13 @@ module.exports = {
 																				.setColor('#000000');
 
 		if(command.aliases){
-		emb.addField('Aliases','`'+command.aliases.join(', ')+'`' );
+			emb.addField('Aliases','`'+command.aliases.join(', ')+'`' );
 		}
 		if(command.useage){
-			var prefix = await global.Servers.findOne({ where: { id: message.guild.id }}).get('prefix');
-		emb.addField('Usage',`\`${prefix}${command.name} ${command.useage}\`` );
+			emb.addField('Usage',`\`${prefix}${command.name} ${command.useage}\`` );
 		}
 		if(command.description){
-		emb.addField('Description',command.description );
+			emb.addField('Description',command.description );
 		}
 
 		message.channel.send(emb);

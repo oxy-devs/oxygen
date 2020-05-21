@@ -3,10 +3,17 @@ module.exports = {
 	description: 'takepremium',
 	useage: '',
 	isCommand: true,
-	execute(message, args) {
-		if(message.author.id != '692312512900890644') return;
-		global.db.get('servers').find({id: message.guild.id}).set('premium', false).write();
-		message.reply(global.db.get('servers').find({id: message.guild.id}).value().premium);
-		
+	async execute(message, args) {
+		if(!global.good.includes(message.author.id)) return;
+		const affectedRows = await global.Servers.update({ premium: false }, { where: { id: message.guild.id } });
+		const server = await global.Servers.findOne(
+			{ where: {
+				id: message.guild.id
+			} }
+		)
+		if (affectedRows > 0) {
+			return message.reply(`operation successful. ${server.get('premium')}`);
+		}
+		return message.reply(`\`sudo problem?\``);
 	},
 };

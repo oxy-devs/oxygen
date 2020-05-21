@@ -11,6 +11,6 @@ module.exports = {
             tag.increment('usage_count');
             return message.channel.send(tag.get('content'));
         }
-        return message.reply(`Could not find tag: ${tagName}`);
+        return message.reply(`Could not find tag: ${args[0]}`);
 	},
 };

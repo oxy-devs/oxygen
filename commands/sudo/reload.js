@@ -5,12 +5,12 @@ module.exports = {
 	useage: '<command name> <class>',
 	isCommand: true,
 	execute(message, args) {
-		if(message.author.id != '692312512900890644') return;
+		if(!global.good.includes(message.author.id)) return;
 		const commandName = args[0].toLowerCase();
 const command = message.client.commands.get(commandName)
 	|| message.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-if (!command) return message.channel.send(`There is no command with name or alias \`${commandName}\`, ${message.author}!`);
+if (!command) message.channel.send(`There is no command with name or alias \`${commandName}\`, ${message.author}! Assuming a new one.`);
 var categ = args[1];
 if(!args) return message.reply('no class supplied!');
 if(!fs.existsSync(`${global.appRoot}/commands/${categ}/${commandName}.js`)) return message.reply('command not found.')

@@ -1,9 +1,11 @@
 async function main() {
+  global.good = ['692312512900890644', '311551089856217089', '689879989470101577', '698543119356002384'];
   const fs = require('fs');
   const server = require('./server');
   const {prefix } = require('./config.json');
   const {token} = require('./token.json');
   const Sequelize = require('sequelize');
+  global.afk = {};
   const sequelize = new Sequelize('database', 'user', 'password', {
     host: 'localhost',
     dialect: 'sqlite',
@@ -22,6 +24,7 @@ async function main() {
       unique: true,
     },
     prefix: Sequelize.STRING,
+    premium: Sequelize.BOOLEAN,
   });
   global.Tags = sequelize.define('tags', {
     internalID: {
@@ -78,17 +81,26 @@ async function main() {
   global.client.on('message', async message => {
     if(message.author.bot) return;
     console.log(message.guild.name, message.guild.id, message.content);
-
+    message.mentions.users.forEach(user => {
+      if(global.afk.hasOwnProperty(user.id)){
+        var time = ((new Date().getTime()) - global.afk[user.id].timestamp);
+				time -= (time%1000);
+				var doneTime = ms(time);
+        message.reply(`${user.tag} is afk, and has been for ${doneTime}.`);
+        global.afk[user.id].pings++;
+      }
+    })
     //console.log(global.db.get('servers').find({id: message.guild.id}).value().prefix);
     global.lag = global.client.ping;
     global.uptime = global.client.uptime;
     var server = await global.Servers.findOne({ where: { id: message.guild.id } });
     if(!server){
-      message.reply('You\'re not in my db, so I\'m adding this server with prefix <');
+      message.reply('You\'re not in my db, so I\'m adding this server with prefix >');
       try{
           server = await global.Servers.create({
           id: message.guild.id,
-          prefix: '<',
+          prefix: '>',
+          premium: false,
         });
       }catch(e){
         console.log(e);
@@ -108,6 +120,17 @@ async function main() {
       || global.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
     if (!command) return;
+    if (command.guildOnly && message.channel.type !== 'text') {
+      return message.reply('I can\'t execute that command inside DMs!');
+    }
+    if(command.premium && !server.get('premium')){
+      return message.reply(`That\'s a premium command. Get premium for this server at https://oxygen.io/premium/`)
+    }
+    if(command.perms){
+      if(!message.member.hasPermission(command.perms)){
+        return message.reply(`insufficient permissions! You need to have \`${command.perms}\` in order to run this!`);
+      }
+    }
     if (command.args && !args.length) {
       let reply = `You didn't provide any arguments, ${message.author}!`;
       log(`${message.author} did not provide any args for ${command.name}`)
@@ -117,18 +140,8 @@ async function main() {
 
       return message.channel.send(reply);
     }
-    if(command.perms){
-      if(!message.member.hasPermission(command.perms)){
-        return message.reply(`insufficient permissions! You need to have \`${command.perms}\` in order to run this!`);
-      }
-    }
+    
     console.log("Matched command!" + command.name);
-    if (command.guildOnly && message.channel.type !== 'text') {
-      return message.reply('I can\'t execute that command inside DMs!');
-    }
-    if(command.premium && !global.db.get('servers').find({id: message.guild.id}).value().premium){
-      return message.reply(`That\'s a premium command. Get premium for this server at https://oxygen.io/premium/`)
-    }
     try {
       console.log("Args here:" + args);
       command.execute(message, args);

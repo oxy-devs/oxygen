@@ -143,3 +143,8 @@ Require stack:
 [index.js:2020-05-19T18:03:32.055Z] TypeError: Cannot read property 'end' of null
 [index.js:2020-05-20T13:27:55.488Z] TypeError: global.client.avatarURL is not a function
 [index.js:2020-05-20T13:28:22.920Z] ReferenceError: prefix is not defined
+[index.js:2020-05-20T22:03:40.250Z] TypeError: Cannot read property 'get' of undefined
+[index.js:2020-05-21T12:52:19.801Z] TypeError: Cannot read property 'id' of undefined
+[index.js:2020-05-21T12:57:18.291Z] TypeError: global.afk.push is not a function
+[index.js:2020-05-21T13:39:14.005Z] TypeError: Date.now(...).getDate is not a function
+[index.js:2020-05-21T13:39:38.610Z] TypeError: Date.now(...).getTime is not a function

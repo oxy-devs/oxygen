@@ -20,7 +20,7 @@ module.exports = {
   console.log(res.body.explanation);
 	let emb = new Discord.MessageEmbed().setDescription(res.body.explanation)
 																			.setImage(res.body.url)
-																			.setColor('#63e2ff');
+																			.setColor('#000000');
   message.channel.send(emb);
 });
     }

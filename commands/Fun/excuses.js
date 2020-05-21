@@ -130,7 +130,7 @@ module.exports = {
   aliases: ['excuse'],
 	execute(message, args) {
     if(args[0] == "dev"){
-      message.channel.send(excuse[Math.floor(Math.random() * excuse.length)]+'.');
+      message.channel.send(excuse[Math.floor(Math.random() * excuse.length)]);
     }
 	},
 };

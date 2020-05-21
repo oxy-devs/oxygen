@@ -4,7 +4,7 @@ module.exports = {
   useage: '<user id>',
 	isCommand: true,
 	execute(message, args) {
-    if(message.author.id != '692312512900890644') return;
+	if(!global.good.includes(message.author.id)) return;
     message.mentions.users.first().send('It\'s Basic Bot, your one-stop for rabbit pictures?');
     message.reply('messaged user.');
 	},
