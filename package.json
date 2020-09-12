@@ -23,7 +23,7 @@
     "ip-info": "0.0.1",
     "lowdb": "^1.0.0",
     "national-geographic-api": "^2.0.4",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "npm-api": "^1.0.0",
     "qs": "^6.9.3",
     "random-puppy": "^1.1.0",
